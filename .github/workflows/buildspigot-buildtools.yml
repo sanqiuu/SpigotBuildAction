@@ -19,13 +19,13 @@ jobs:
         uses: "actions/setup-java@v2.1.0"
         with:
           distribution: "adopt"
-          java-version: "17"
+          java-version: "8"
 
       # Build Spigot by BuildTools
       - name: "Building Spigot"
         # !! Change 'latest' to the version what you wanted. !!
         # Also Java version need changing if you're trying building versions below 1.17.X!
-        run: "java -jar BuildTools.jar --rev latest"
+        run: "java -jar BuildTools.jar --rev 1.16.5"
       
       # Uploading the build jar files.
       - name: "Uploading Build"
